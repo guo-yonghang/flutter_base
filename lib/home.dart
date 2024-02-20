@@ -54,6 +54,42 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           const Divider(),
+          ListTile(
+            leading: const Icon(Icons.date_range),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("日期时间国际化"),
+            onTap: () {
+              Get.toNamed('/datetime');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.data_array),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("数据格式转换"),
+            onTap: () {
+              Get.toNamed('/jsonmap');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.request_page),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("dio请求数据"),
+            onTap: () {
+              Get.toNamed('/request');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.more_horiz),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("下拉下拉加载"),
+            onTap: () {
+              Get.toNamed('/loadmore');
+            },
+          ),
+          const Divider(),
         ],
       ),
     );

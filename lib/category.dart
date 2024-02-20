@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 
 class CategoryPage extends StatefulWidget {
   const CategoryPage({super.key});
@@ -8,15 +9,40 @@ class CategoryPage extends StatefulWidget {
 }
 
 class _CategoryState extends State<CategoryPage> {
+  List _list = [];
+
+  _getData() async {
+    var res = await Dio().get('https://jdmall.itying.com/api/pcate');
+    print(res.data['result']);
+    setState(() {
+      _list = res.data['result'];
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _getData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Category'),
+        title: const Text('Category'),
       ),
-      body: Center(
-        child: Text('Welcome to the Category Page!'),
-      ),
+      body: _list.isNotEmpty
+          ? ListView.builder(
+              itemCount: _list.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text('${_list[index]['title']}'),
+                );
+              },
+            )
+          : const Center(
+              child: CircularProgressIndicator(),
+            ),
     );
   }
 }

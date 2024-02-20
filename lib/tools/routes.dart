@@ -5,6 +5,11 @@ import '../setting.dart';
 import '../dialog.dart';
 import '../pageview.dart';
 import '../animatedlist.dart';
+import '../datetime.dart';
+import '../jsonmap.dart';
+import '../request.dart';
+import '../loadmore.dart';
+import '../newscontent.dart';
 
 List<GetPage<dynamic>> GetPageRoutes = [
   GetPage(name: '/', page: () => const RootPage()),
@@ -13,4 +18,9 @@ List<GetPage<dynamic>> GetPageRoutes = [
   GetPage(name: '/dialog', page: () => const DialogPage()),
   GetPage(name: '/pageview', page: () => const PageViewPage()),
   GetPage(name: '/animatedlist', page: () => const AnimatedListPage()),
+  GetPage(name: '/datetime', page: () => const DateTimePage()),
+  GetPage(name: '/jsonmap', page: () => const JsonmapPage()),
+  GetPage(name: '/request', page: () => const RequestPage()),
+  GetPage(name: '/loadmore', page: () => const LoadmorePage()),
+  GetPage(name: '/newscontent', page: () => const NewsContentPage()),
 ];

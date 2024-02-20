@@ -15,9 +15,12 @@ dependencies:
   fluttertoast: ^8.2.4
   photo_view: ^0.14.0
   get: ^4.6.6
+  flutter_localizations:
+    sdk: flutter
+  dio: ^5.4.1
+  flutter_html: ^2.2.1
   # image_gallery_saver: ^1.7.1
   # permission_handler: ^8.1.6
-  # dio: ^5.4.0
 
 dev_dependencies:
   flutter_test:
