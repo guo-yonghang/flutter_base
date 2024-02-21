@@ -1,7 +1,8 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:dio/dio.dart';
+import 'dart:convert';
+import 'package:flutter_html/flutter_html.dart';
 
 class NewsContentPage extends StatefulWidget {
   const NewsContentPage({
@@ -43,12 +44,18 @@ class _NewsContentPageState extends State<NewsContentPage> {
                   padding: const EdgeInsets.all(10),
                   child: Text(
                     "${list[0]['title']}",
-                    style: const TextStyle(fontSize: 22),
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 22,
+                    ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Text("${list[0]['content']}"),
+                Html(
+                  data: list[0]['content'],
+                  style: {
+                    "body": Style(backgroundColor: Colors.white),
+                    'p': Style(fontSize: FontSize.large)
+                  },
                 )
               ],
             )

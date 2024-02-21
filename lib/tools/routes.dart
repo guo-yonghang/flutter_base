@@ -10,6 +10,12 @@ import '../jsonmap.dart';
 import '../request.dart';
 import '../loadmore.dart';
 import '../newscontent.dart';
+import '../webcontent.dart';
+import '../devicelaunch.dart';
+import '../videoplayer.dart';
+import '../imagepicker.dart';
+import '../sharedpreferences.dart';
+import '../barcodescan.dart';
 
 List<GetPage<dynamic>> GetPageRoutes = [
   GetPage(name: '/', page: () => const RootPage()),
@@ -23,4 +29,11 @@ List<GetPage<dynamic>> GetPageRoutes = [
   GetPage(name: '/request', page: () => const RequestPage()),
   GetPage(name: '/loadmore', page: () => const LoadmorePage()),
   GetPage(name: '/newscontent', page: () => const NewsContentPage()),
+  GetPage(name: '/webcontent', page: () => const WebContentPage()),
+  GetPage(name: '/devicelaunch', page: () => const DeviceLaunchPage()),
+  GetPage(name: '/videoplayer', page: () => const VideoPlayerPage()),
+  GetPage(name: '/imagepicker', page: () => const ImagePickerPage()),
+  GetPage(
+      name: '/sharedpreferences', page: () => const SharedPreferencesPage()),
+  GetPage(name: '/barcodescan', page: () => const BarcodeScanPage()),
 ];

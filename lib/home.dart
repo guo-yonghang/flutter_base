@@ -90,6 +90,60 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           const Divider(),
+          ListTile(
+            leading: const Icon(Icons.web),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("WebView页面"),
+            onTap: () {
+              Get.toNamed('/webcontent');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.plumbing),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("设备信息网络状态其他应用"),
+            onTap: () {
+              Get.toNamed('/devicelaunch');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.video_file),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("视频播放"),
+            onTap: () {
+              Get.toNamed('/videoplayer');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.image),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("图片视频选择"),
+            onTap: () {
+              Get.toNamed('/imagepicker');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.storage),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("本地存储"),
+            onTap: () {
+              Get.toNamed('/sharedpreferences');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.barcode_reader),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("扫码识别"),
+            onTap: () {
+              Get.toNamed('/barcodescan');
+            },
+          ),
+          const Divider(),
         ],
       ),
     );
