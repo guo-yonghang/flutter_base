@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
           ListTile(
             leading: const Icon(Icons.list_alt),
             trailing: const Icon(Icons.keyboard_arrow_right),
-            title: const Text("列表展示"),
+            title: Text("list_view".tr),
             onTap: () {
               Get.toNamed('/list');
             },
@@ -141,6 +141,15 @@ class _HomePageState extends State<HomePage> {
             title: const Text("扫码识别"),
             onTap: () {
               Get.toNamed('/barcodescan');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.barcode_reader),
+            trailing: const Icon(Icons.keyboard_arrow_right),
+            title: const Text("Get Utils"),
+            onTap: () {
+              Get.toNamed('/getutils');
             },
           ),
           const Divider(),

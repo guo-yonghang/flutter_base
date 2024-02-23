@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import './tools/routes.dart';
+import './tools/language.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
         Locale('en', 'US'),
         Locale('zh', 'CN'),
       ],
+      translations: Messages(),
+      locale: const Locale('zh', 'CN'),
+      fallbackLocale: const Locale('en', 'US'),
     );
   }
 }

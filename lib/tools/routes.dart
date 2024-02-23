@@ -16,6 +16,7 @@ import '../videoplayer.dart';
 import '../imagepicker.dart';
 import '../sharedpreferences.dart';
 import '../barcodescan.dart';
+import '../getutils.dart';
 
 List<GetPage<dynamic>> GetPageRoutes = [
   GetPage(name: '/', page: () => const RootPage()),
@@ -36,4 +37,5 @@ List<GetPage<dynamic>> GetPageRoutes = [
   GetPage(
       name: '/sharedpreferences', page: () => const SharedPreferencesPage()),
   GetPage(name: '/barcodescan', page: () => const BarcodeScanPage()),
+  GetPage(name: '/getutils', page: () => const GetUtilsPage()),
 ];
